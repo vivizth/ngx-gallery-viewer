@@ -2,7 +2,7 @@
 
 Simple gallery viewer for angular.
 
-![](screenshot.gif)
+![screenshot](https://github.com/vivizth/ngx-gallery-viewer/blob/main/projects/viewer/screenshot.gif?raw=true)
 
 # Usage
 
