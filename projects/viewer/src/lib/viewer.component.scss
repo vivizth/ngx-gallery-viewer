@@ -1,0 +1,69 @@
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.nav { 
+    height: 5vh;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.big-wrap {
+    height: 90vh;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.big-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+}
+.thumb-wrap {
+    height: 5vh;
+    width: 100vw;
+    overflow-x: scroll;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.thumb-scroll {
+    height: 100%;
+    display: flex;
+}
+.thumb-item {
+    height: 100%;
+    opacity: 0.42;
+}
+.active { 
+    opacity: 1;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    color: rgba(255,255,255, 0.7);
+    font-size: 3em;
+    opacity: 0.6;
+    background: rgba(0,0,0,.3);
+    border-radius: 3em;
+}
+.arrow-right {
+    right: 24px;
+}
+.arrow-left {
+    left: 24px;
+}
+.close {
+    &:hover {
+        cursor: pointer;
+    }
+}

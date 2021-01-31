@@ -1,0 +1,23 @@
+<div class="wrap" (click)="clickBackdrop($event)">
+    <div class="nav">
+        <div> 
+            <span data-testId="num-current-image">{{data?.index + 1}} </span> / 
+            <span data-testId="num-max-image">{{data?.files?.length}} </span>
+        </div>
+        <div name="close" data-testId="btn-close" class="close" (click)="close()">&times;</div>
+    </div>
+    <div class="big-wrap">
+        <img [src]="data?.files[data?.index]?.dataURL" class="big-image" data-testId="image-big" alt="image-big"/>
+    </div>
+    <div class="thumb-wrap">
+        <div class="thumb-scroll">
+            <img (click)="select(i)" [src]="f?.dataURL"
+             alt="image-thumbnail"
+             *ngFor="let f of data?.files; let i = index" 
+             class="thumb-item" [ngClass]="{ active: i === data?.index}"
+             data-testId="image-thumbnail" #thumbnail/>
+        </div>
+    </div>
+</div>
+<div data-testId="btn-arrow-left" class="arrow arrow-left" (click)="prev()" ><</div>
+<div data-testId="btn-arrow-right" class="arrow arrow-right" (click)="next()">></div>
